@@ -259,6 +259,14 @@ You can now just run k3sup as usual. No special parameters are necessary.
 k3sup --ip $IP --user user
 ```
 
+## If your server is accessed using an ssh-key other than the default id_rsa
+
+If you have setup access to your server with a ssh-key with a name other than the default of id_rsa then you will need to specify the correct key to use by using the --ssh-key parameter:
+
+```  
+SERVER_IP=<your.server.ip.here> && k3sup install --ip $SERVER_IP --ssh-key $HOME/.ssh/<non RSA private key> --user root --local-path=./kubeconfig
+```
+
 ## Contributing
 
 ### Say thanks ☕️ 👏
